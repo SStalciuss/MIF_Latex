@@ -1,0 +1,46 @@
+\ProvidesPackage{MIF_title_page}[2024/04/21 My Custom Title Page]
+
+\RequirePackage{graphicx} % Required for including images
+\RequirePackage{setspace} % Required for spacing environments
+
+
+% #1 program
+% #2 title
+% #3 subtitle
+% #4 author
+% #5 email
+\newcommand{\MIFtitlepage}[5]{
+\begin{titlepage}
+    \vskip 20pt
+    \begin{center}
+        \includegraphics[scale=1]{FH.png}
+    \end{center}
+
+    \begin{center}{\large
+    VILNIAUS UNIVERSITETAS\\
+    MATEMATIKOS IR INFORMATIKOS FAKULTETAS\\
+    #1\\
+    BAKALAURO STUDIJŲ PROGRAMA\par}
+    \end{center}
+
+    \vskip 80pt
+    \begin{center} {\huge \textbf{#2}\par} % Title
+    \end{center}
+
+    \vskip 40pt
+    \center{\large{#3}} % Subtitle
+
+    \vskip 60pt
+    \hfill\begin{minipage}{0.7\linewidth}
+    {\begin{onehalfspacing}\large Atliko: #4
+    \\
+    VU el. p.: #5\par\end{onehalfspacing}} % Email
+    \end{minipage}
+
+    \vskip 70pt
+    \center{\large{Vilnius}}
+    \center{\large{2024}} % Year
+\end{titlepage}
+}
+
+\endinput
